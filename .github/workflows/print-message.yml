@@ -1,0 +1,17 @@
+name: Print Message on Commit
+
+on:
+  push:
+    branches:
+      - main  # Change this to your default branch name if different
+
+jobs:
+  print-message:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Print a message
+      run: echo "A new commit has been made!"
